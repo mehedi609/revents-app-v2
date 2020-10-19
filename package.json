@@ -10,6 +10,13 @@
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3"
   },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
