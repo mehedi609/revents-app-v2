@@ -2,7 +2,7 @@ import React from 'react';
 import { Dropdown, Image, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-const AfterSignInMenu = ({ setAuthenticated }) => {
+const AfterSignInMenu = ({ signout }) => {
   return (
     <Menu.Item position="right">
       <Image avatar spaced="right" src="/assets/user.png" />
@@ -15,11 +15,7 @@ const AfterSignInMenu = ({ setAuthenticated }) => {
             icon="plus"
           />
           <Dropdown.Item text="My Profile" icon="user" />
-          <Dropdown.Item
-            text="Sign Out"
-            icon="power"
-            onClick={() => setAuthenticated(false)}
-          />
+          <Dropdown.Item text="Sign Out" icon="power" onClick={signout} />
         </Dropdown.Menu>
       </Dropdown>
     </Menu.Item>

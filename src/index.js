@@ -5,14 +5,20 @@ import 'semantic-ui-css/semantic.min.css';
 import './app/layout/styles.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import index from './app/store';
+import ScrollToTop from './app/layout/ScrollToTop';
 
 const rootEl = document.getElementById('root');
 
 function render() {
   ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
+    <Provider store={index}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </Provider>,
     rootEl,
   );
 }
